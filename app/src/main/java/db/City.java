@@ -1,12 +1,13 @@
 package db;
 
-import org.litepal.crud.DataSupport;
 
-public class City extends DataSupport {
+import org.litepal.crud.LitePalSupport;
+
+public class City extends LitePalSupport {
 
     private int id;
     private  String cityName;
-    private  cityCode;
+    private  int cityCode;
     private  int provinceId;
 
     public int getId() {
@@ -23,6 +24,15 @@ public class City extends DataSupport {
 
     public void setCityName(String cityName) {
         this.cityName = cityName;
+    }
+
+
+    public  int getCityCode() {
+        return cityCode;
+    }
+
+    public  void  setCityCode(int cityCode) {
+        this.cityCode = cityCode;
     }
 
     public int getProvinceId() {
